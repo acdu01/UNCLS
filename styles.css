@@ -517,6 +517,14 @@ a {
   background: linear-gradient(180deg, #ffffff, #edf7fc);
 }
 
+.section-followup {
+  margin-top: 1.5rem;
+}
+
+.prose-block p + p {
+  margin-top: 0.9rem;
+}
+
 .action-panel {
   display: flex;
   gap: 1rem;
