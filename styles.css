@@ -854,6 +854,210 @@ a {
   margin-top: 1.3rem;
 }
 
+.application-layout {
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
+}
+
+.application-form-card {
+  padding: 1.5rem;
+}
+
+.application-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.application-fieldset {
+  margin: 0;
+  padding: 1.2rem;
+  background: linear-gradient(180deg, #ffffff, #f7fbfe);
+  border: 1px solid var(--un-border);
+  border-radius: 22px;
+}
+
+.application-fieldset legend {
+  padding: 0 0.45rem;
+  color: var(--un-deep);
+  font-family: Cambria, Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+}
+
+.application-fieldset > p:first-of-type {
+  margin: 0.1rem 0 1rem;
+  color: var(--ink-soft);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field-group--full {
+  grid-column: 1 / -1;
+}
+
+.field-group label,
+.checkbox-item__copy strong {
+  font-weight: 700;
+}
+
+.field-group label {
+  color: var(--ink);
+}
+
+.required-marker {
+  color: #8b4f00;
+}
+
+.application-form input:not([type="checkbox"]):not([type="radio"]),
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--un-border);
+  border-radius: 16px;
+  font: inherit;
+}
+
+.application-form input[type="file"] {
+  width: 100%;
+  padding: 0.7rem;
+  color: var(--ink-soft);
+  background: #fff;
+  border: 1px dashed rgba(0, 85, 140, 0.28);
+  border-radius: 16px;
+  font: inherit;
+}
+
+.application-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.application-form input:focus-visible,
+.application-form select:focus-visible,
+.application-form textarea:focus-visible {
+  outline: 3px solid rgba(0, 158, 219, 0.2);
+  outline-offset: 2px;
+  border-color: rgba(0, 85, 140, 0.3);
+}
+
+.checkbox-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.checkbox-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.95rem 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 85, 140, 0.1);
+  border-radius: 18px;
+}
+
+.checkbox-item input {
+  margin-top: 0.2rem;
+}
+
+.checkbox-item__copy {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.checkbox-item__copy span,
+.application-note p,
+.application-aside p,
+.asset-preview p,
+.asset-preview li {
+  color: var(--ink-soft);
+}
+
+.checkbox-item__copy a {
+  color: var(--un-deep);
+  font-weight: 700;
+}
+
+.application-note {
+  padding: 1rem 1.1rem;
+  background: linear-gradient(180deg, rgba(243, 216, 93, 0.18), rgba(255, 255, 255, 0.96));
+  border: 1px solid rgba(96, 75, 0, 0.16);
+  border-radius: 18px;
+}
+
+.application-note p {
+  margin: 0;
+}
+
+.application-aside {
+  display: grid;
+  gap: 1rem;
+}
+
+.document-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.document-list li + li {
+  margin-top: 0.55rem;
+}
+
+.asset-preview {
+  display: grid;
+  gap: 1rem;
+}
+
+.asset-preview__label {
+  display: inline-flex;
+  align-self: start;
+  padding: 0.45rem 0.8rem;
+  color: #604b00;
+  background: rgba(243, 216, 93, 0.36);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.asset-preview__image {
+  overflow: hidden;
+  border: 1px solid rgba(0, 85, 140, 0.08);
+  border-radius: 20px;
+}
+
+.asset-preview__image img {
+  width: 100%;
+  height: auto;
+}
+
+.asset-preview h3 {
+  margin: 0;
+}
+
+.asset-preview ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.asset-preview .text-link {
+  margin-top: 0;
+}
+
 .site-footer {
   background: #f2f7fb;
   border-top: 1px solid rgba(0, 85, 140, 0.08);
@@ -913,6 +1117,7 @@ a {
   .finance-grid,
   .two-column-grid,
   .sidebar-layout,
+  .form-grid,
   .three-card-grid,
   .policy-card-grid,
   .content-grid {
@@ -1029,9 +1234,15 @@ a {
   .logo-panel,
   .grant-showcase,
   .policy-updates,
-  .action-panel {
+  .action-panel,
+  .application-form-card {
     padding: 1.15rem;
     border-radius: 20px;
+  }
+
+  .application-fieldset {
+    padding: 1rem;
+    border-radius: 18px;
   }
 
   .section-heading h2,
